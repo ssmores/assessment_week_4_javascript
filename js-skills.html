@@ -243,9 +243,21 @@
   <input type="button" class="tricky-to-find" value="Pop-Up Please!">
 </fieldset>
 
+<script src="https://code.jquery.com/jquery.js"></script>
 <script>
   "use strict";
   // code here for above problem
+
+  // This was a helper function, when the inline function didn't work because I was using the incorrect selector.
+  // function showsPopUp(evt) {
+  //   alert("This is a pop up using jquery!");
+  // }
+
+  // This is using an inline anonymous function, which means I get to have one less function name!
+  $(".tricky-to-find").click(function(evt) {
+    alert("This is a pop up using an anonymous function using jQuery!")
+  });
+
 </script>
 
 <div class="hint">
@@ -274,6 +286,18 @@
 <script>
   "use strict";
   // put your code here
+
+  // This uses a helper function to change the picture.
+  // function showPuppies(evt) {
+  //   $("#kittenz-rule").attr("src", "https://s-media-cache-ak0.pinimg.com/564x/b7/df/71/b7df718141757a559498cdf15cbfec60.jpg");
+  // }
+  //  $("#kittenz-rule").dblclick(showPuppies);
+
+  // This is an anonymous inline function.
+  $("#kittenz-rule").dblclick(function(evt) {
+    $("#kittenz-rule").attr("src", "https://s-media-cache-ak0.pinimg.com/564x/b7/df/71/b7df718141757a559498cdf15cbfec60.jpg");
+  });
+  
 </script>
 
 <div class="hint">
@@ -308,6 +332,29 @@
 <script>
   "use strict";
   // put your code here
+  // This code makes the image fade in and stay, using an anonymous inline function.
+  // $("#make-a-porcupine").click(function(evt) {
+  //   $("#cute-porcupine-image").fadeIn(1000);
+  // });
+
+  // This code would toggle the picture in and out if you clicked on the button.
+  $("#make-a-porcupine").click(function(evt) {
+    $("#cute-porcupine-image").fadeToggle(1000);
+  });
+
+  // Set picture to show up in browser on its own without an event
+  // function showPorcupine() {
+  //    $("#cute-porcupine-image").fadeIn(1000);
+  // }
+
+  // setTimeout(showPorcupine, 5000);
+
+  // Set picture to show in browser on its own using an inline anonymous function.
+  // setTimeout(function() {
+  //   $("#cute-porcupine-image").fadeIn(1000);
+  // }, 5000);
+
+
 </script>
 
 <div class="hint">
